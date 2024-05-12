@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="bg_clear">#1679AB</color>
+    <color name="bg_opacity_clear">#4D1679AB</color>
+    <color name="colorOverlay">#78ffffff</color>
+    <color name="bg_rain">#153448</color>
+    <color name="bg_opacity_rain">#4D153448</color>
+    <color name="bg_cloud">#81a5ba</color>
+    <color name="bg_opacity_cloud">#4D81a5ba</color>
+    <color name="bg_mist">#c7d2d5</color>
+    <color name="bg_opacity_mist">#4Dc7d2d5</color>
+    <color name="bg_haze">#ddc7af</color>
+    <color name="bg_opacity_haze">#4Dddc7af</color>
+</resources>

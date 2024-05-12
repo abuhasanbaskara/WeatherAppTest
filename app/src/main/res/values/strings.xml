@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">WeatherAppTest</string>
+    <string name="feels_like">Feels like: </string>
+    <string name="ms">(m/s)</string>
+    <string name="wind">Wind:</string>
+    <string name="gust">Gust:</string>
+    <string name="press">Press:</string>
+    <string name="humid">Humid:</string>
+    <string name="dew">Dew:</string>
+    <string name="hpa">hPa</string>
+    <string name="uv">UV:</string>
+    <string name="celcius">℃</string>
+    <string name="degree">°</string>
+    <string name="percent">%</string>
+    <string name="symbol_colon">:</string>
+    <string name="symbol_space">\u0020</string>
+    <string name="sunrise">Sunrise:</string>
+    <string name="sunset">Sunset:</string>
+    <string name="weather_forecast">Weather Forecast</string>
+    <string name="slash">/</string>
+    <string name="cloud">Cloud</string>
+    <string name="clear">Clear</string>
+    <string name="mist">Mist</string>
+    <string name="snow">Snow</string>
+    <string name="rain">Rain</string>
+    <string name="haze">Haze</string>
+    <string name="no_internet">No Internet Connection</string>
+    <string name="list_some_country">List Some Country Weather</string>
+</resources>

@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_weather_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_clear">
+
+    <com.github.matteobattilana.weather.WeatherView
+        android:id="@+id/wv_weather_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="75dp"
+                android:layout_marginEnd="32dp"
+                android:backgroundTint="@color/bg_opacity_clear"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_weather_icon"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_current_date"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        tools:text="Wed, 27 Maret 2024"
+                        android:drawableLeft="@drawable/white_date_range_24"
+                        android:gravity="center_vertical"
+                        android:drawablePadding="5dp"
+                        android:fontFamily="@font/nunito_medium"
+                        android:textSize="15sp"
+                        android:textColor="@color/white"
+                        app:layout_constraintEnd_toStartOf="@+id/iv_weather_icon"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_current_location"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:drawableLeft="@drawable/location_sign_svgrepo_com"
+                        android:drawablePadding="5dp"
+                        android:fontFamily="@font/nunito_medium"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        app:layout_constraintEnd_toStartOf="@+id/iv_weather_icon"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_current_date"
+                        tools:text="Magetan, Indonesia" />
+
+                    <TextView
+                        android:id="@+id/tv_current_status"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="20dp"
+                        android:drawablePadding="5dp"
+                        android:fontFamily="@font/nunito_medium"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toStartOf="@+id/iv_weather_icon"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_current_location"
+                        tools:text="Clouds: Broken Clouds" />
+
+                    <TextView
+                        android:id="@+id/tv_current_temp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="15dp"
+                        android:drawablePadding="5dp"
+                        android:fontFamily="@font/nunito_bold"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/white"
+                        android:textSize="38sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_current_status"
+                        tools:text="21\u2103" />
+
+                    <TextView
+                        android:id="@+id/tv_current_feels_like"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:drawablePadding="5dp"
+                        android:fontFamily="@font/nunito_medium"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_current_temp"
+                        tools:text="Feels like: 22.1\u2103" />
+
+                    <TextView
+                        android:id="@+id/tv_current_wind_speed"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_marginEnd="16dp"
+                        android:drawableLeft="@drawable/anemometer_svgrepo_com_18"
+                        android:drawablePadding="5dp"
+                        android:fontFamily="@font/nunito_medium"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/iv_weather_icon"
+                        tools:text="Wind: 3.13(m/s)" />
+
+                    <TextView
+                        android:id="@+id/tv_current_wind_gust"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_marginEnd="16dp"
+                        android:drawableLeft="@drawable/wind_svgrepo_com_18"
+                        android:drawablePadding="5dp"
+                        android:fontFamily="@font/nunito_medium"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_current_wind_speed"
+                        tools:text="Gust: 6.71(m/s)" />
+
+                    <TextView
+                        android:id="@+id/tv_current_uv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_marginEnd="16dp"
+                        android:drawableLeft="@drawable/awake_svgrepo_com_18"
+                        android:drawablePadding="5dp"
+                        android:fontFamily="@font/nunito_medium"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_current_wind_gust"
+                        tools:text="UV: 0.16" />
+
+                    <TextView
+                        android:id="@+id/tv_current_pressure"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_marginEnd="16dp"
+                        android:drawableLeft="@drawable/pressure_svgrepo_com_18"
+                        android:drawablePadding="5dp"
+                        android:fontFamily="@font/nunito_medium"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_current_uv"
+                        tools:text="Press: 1014 hPA" />
+
+                    <TextView
+                        android:id="@+id/tv_current_humidity"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_marginEnd="16dp"
+                        android:drawableLeft="@drawable/humidity_svgrepo_com_18"
+                        android:drawablePadding="5dp"
+                        android:fontFamily="@font/nunito_medium"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_current_pressure"
+                        tools:text="Humidity: 90%" />
+
+                    <TextView
+                        android:id="@+id/tv_current_dewpoint"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_marginEnd="16dp"
+                        android:drawableLeft="@drawable/dew_point_filled_svgrepo_com_18"
+                        android:drawablePadding="5dp"
+                        android:fontFamily="@font/nunito_medium"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_current_humidity"
+                        tools:text="Dew Point: 21.1\u2103" />
+
+                    <TextView
+                        android:id="@+id/tv_current_sunsire"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_marginStart="10dp"
+                        android:drawableLeft="@drawable/sunrise_svgrepo_com_18"
+                        android:drawablePadding="5dp"
+                        android:fontFamily="@font/nunito_medium"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_current_feels_like"
+                        tools:text="Sunrise: 06:31" />
+
+                    <TextView
+                        android:id="@+id/tv_current_sunset"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_marginStart="10dp"
+                        android:drawableLeft="@drawable/sunset_svgrepo_com_18"
+                        android:drawablePadding="5dp"
+                        android:fontFamily="@font/nunito_medium"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_current_sunsire"
+                        tools:text="Sunset: 06:31" />
+
+                    <View
+                        android:id="@+id/divider_current_weather_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="10dp"
+                        android:background="@android:color/white"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_current_dewpoint" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_hourly"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/divider_current_weather_detail" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_forecast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="70dp"
+                android:backgroundTint="@color/bg_opacity_clear"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/card_main"
+                app:layout_constraintTop_toBottomOf="@+id/card_main">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_weather_forecast"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/nunito_bold"
+                        android:gravity="center_vertical"
+                        android:text="@string/weather_forecast"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/divider_forecast"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="10dp"
+                        android:background="@android:color/white"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_weather_forecast" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_daily"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/divider_forecast" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginBottom="5dp"
+                app:layout_constraintBottom_toTopOf="@+id/card_main"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/baseline_keyboard_backspace_32" />
+
+            <ImageView
+                android:id="@+id/iv_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="5dp"
+                app:layout_constraintBottom_toTopOf="@+id/card_main"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/baseline_format_list_bulleted_32" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.github.matteobattilana.weather.WeatherView>
+
+
+</ScrollView>
