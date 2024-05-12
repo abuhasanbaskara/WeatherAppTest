@@ -83,7 +83,7 @@ class WeatherListFragment : Fragment() {
                         viewModel.getCurrentWeather(location.latitude, location.longitude, Constants.exclude, BuildConfig.WEATHER_API_KEY)
                     }
                     weatherDeferred.await()
-                    delay(300)
+                    delay(1000)
                 }
 
             }
